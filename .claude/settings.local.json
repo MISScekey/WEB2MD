@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(curl:*)",
+      "Bash(chmod:*)",
+      "Bash(for file in manifest.json popup.html popup.css popup.js content.js background.js)",
+      "Bash(do if [ -f \"/mnt/c/web_to_md/$file\" ])",
+      "Bash(then echo \"✅ $file\")",
+      "Bash(else echo \"❌ $file 缺失\")",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(python3:*)",
+      "Bash(/dev/null)",
+      "Bash(ls:*)",
+      "WebFetch(domain:www.runoob.com)",
+      "Bash(mv:*)",
+      "Bash(grep:*)",
+      "Bash(rm:*)"
+    ],
+    "deny": []
+  }
+}
