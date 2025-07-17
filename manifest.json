@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Web2MD - 网页转Markdown转换器",
+  "version": "1.0.0",
+  "description": "一键将任何网页转换为Markdown格式。支持复制到剪贴板或下载为.md文件。",
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "downloads",
+    "scripting",
+    "notifications",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "转换网页为Markdown",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["libs/readability.js", "libs/turndown.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["libs/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

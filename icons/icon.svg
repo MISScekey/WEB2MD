@@ -1,0 +1,7 @@
+<!-- Icon placeholder - Convert this to actual PNG icons -->
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" fill="#007bff" rx="20"/>
+  <text x="64" y="45" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">WEB</text>
+  <text x="64" y="70" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">2</text>
+  <text x="64" y="95" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">MD</text>
+</svg>

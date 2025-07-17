@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web2MD - 网页转Markdown</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌐 Web2MD</h1>
+            <p>将需求WIKI转为 Markdown</p>
+        </div>
+        
+        <div class="status" id="status">
+            <div class="status-text">准备转换</div>
+        </div>
+        
+        <div class="actions">
+            <button id="convertBtn" class="btn btn-primary">
+                <span class="btn-icon">📄</span>
+                转换为 Markdown
+            </button>
+            
+            <div class="action-buttons" id="actionButtons" style="display: none;">
+                <button id="copyBtn" class="btn btn-secondary">
+                    <span class="btn-icon">📋</span>
+                    复制到剪贴板
+                </button>
+                
+                <button id="downloadBtn" class="btn btn-secondary">
+                    <span class="btn-icon">💾</span>
+                    下载 .md 文件
+                </button>
+            </div>
+        </div>
+        
+        <div class="preview" id="preview" style="display: none;">
+            <h3>预览：</h3>
+            <div class="markdown-content" id="markdownContent"></div>
+        </div>
+        
+        <div class="options" id="options">
+            <label>
+                <input type="checkbox" id="includeImages" checked>
+                包含图片
+            </label>
+            <label>
+                <input type="checkbox" id="includeLinks" checked>
+                包含链接
+            </label>
+            <label>
+                <input type="checkbox" id="smartExtraction" checked>
+                智能内容提取
+            </label>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
